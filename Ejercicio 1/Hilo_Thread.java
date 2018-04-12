@@ -1,4 +1,4 @@
-package Hilo;
+
 
 public class Hilo_Thread extends Thread {
     private String _argumento;
