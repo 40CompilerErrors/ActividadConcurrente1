@@ -1,3 +1,13 @@
+
+/*
+ * NOTA IMPORTANTE
+ * Los comentarios en este codigo indican las cosas que se han escrito o
+ * modificado a partir del codigo aportado por el profesor. De esta forma
+ * queda claro que cosas se han modificado ya que son indicadas previamente 
+ * por un comentario.
+ * 
+ */
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -10,6 +20,10 @@ public class Bounce extends JFrame {
 		jf.setSize(600, 500);
 		jf.setVisible(true);
 	}
+
+	/*
+	 * Creamos y colocamos el nuevo boton clear
+	 */
 
 	Bounce() {
 		setTitle("Bounce");
@@ -33,6 +47,16 @@ public class Bounce extends JFrame {
 		south.add(close);
 		cp.add(south, "South");
 	}
+
+	/*
+	 * Reajustamos las acciones de cada boton con el action listener. En start
+	 * anadimos que reinicie el flag, poniendo la variable booleana fin a false.
+	 * El close ya funcionara, debido a que la creacion de una bola es realizada
+	 * en un hilo esto no impidiendo la ejecucion de salida de este boton En
+	 * clear cambiamos la variable booleana fin que hara que se accione el flag
+	 * en la clase Ball
+	 * 
+	 */
 
 	class ButtonHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {

@@ -1,9 +1,24 @@
+
+/*
+ * NOTA IMPORTANTE
+ * Los comentarios en este codigo indican las cosas que se han escrito o
+ * modificado a partir del codigo aportado por el profesor. De esta forma
+ * queda claro que cosas se han modificado ya que son indicadas previamente 
+ * por un comentario.
+ * 
+ */
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+/*
+ * Hacemos que la clase Ball extienda de Thread
+ */
 class Ball extends Thread {
-
+	/*
+	 * Creamos una variable booleana llamada fin a modo de flag
+	 */
 	public static boolean fin = false;
 
 	Ball(JPanel c, Color clr) {
@@ -11,6 +26,12 @@ class Ball extends Thread {
 		color = clr;
 	}
 
+	/*
+	 * Creamos el run. El bucle while gestiona el funcionamiento del flag. Una
+	 * vez se sale del bucle while se vuelve a pintar el fondo.
+	 * 
+	 * @see java.lang.Thread#run()
+	 */
 	public void run() {
 
 		draw(); // draw ball for first time
